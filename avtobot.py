@@ -29,7 +29,7 @@ class GoPaste(Login):
                         'message': self.mes
                     }
                     )
-                    print("Успех")
+                    print("Успех пост сделан id = ", self.i)
                 except Exception as e:
                     print("Exception", e)
                     print("в группе с данным id не выложился пост", self.i)
@@ -42,5 +42,6 @@ class GoPaste(Login):
                 time.sleep(random.randint(8*60*60, 9*60*60))
                 flagForSleep = 0
 
+print("работа начата.")
 time.sleep(8*60*60)
 GoPaste().Go_to()
