@@ -6,7 +6,7 @@ import random
 class Login():
     """return login on api vk"""
 
-    def LogOn(self):  # <- GET LOGIN AND PASS
+    def LogOn():  # <- GET LOGIN AND PASS
         return vk_api.VkApi(login='89197106221', password='rootprava12')
 
 
@@ -20,6 +20,7 @@ class GoPaste(Login):
 
     def Go_to(self):
         self.vk.auth()
+        flagForSleep = 0
         while True:
             for self.i in self.id_club:
                 try:
@@ -33,8 +34,13 @@ class GoPaste(Login):
                     print("Exception", e)
                     print("в группе с данным id не выложился пост", self.i)
                     time.sleep(random.randint(44, 122))
-            time.sleep(random.randint(3*60*60, 4*60*60))
+
+            flagForSleep += 1
+            if (flagForSleep == 2):
+                time.sleep(random.randint(3*60*60, 4*60*60))
+            else:
+                time.sleep(random.randint(8*60*60, 9*60*60))
+                flagForSleep = 0
 
 
 GoPaste().Go_to()
-# pep8
