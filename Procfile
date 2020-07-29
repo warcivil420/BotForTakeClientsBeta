@@ -1,1 +1,1 @@
-web: python avtobot.py
+worker: python avtobot.py
