@@ -36,5 +36,5 @@ class GoPaste(Login):
             time.sleep(random.randint(3*60*60, 4*60*60))
 
 
-# GoPaste().Go_to()
+GoPaste().Go_to()
 # pep8
