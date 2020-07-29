@@ -36,11 +36,11 @@ class GoPaste(Login):
                     time.sleep(random.randint(44, 122))
 
             flagForSleep += 1
-            if (flagForSleep < 2):
-                time.sleep(random.randint(3*60*60, 4*60*60))
+            if (flagForSleep <= 3):
+                time.sleep(random.randint(2*60*60, 3*60*60))
             else:
                 time.sleep(random.randint(8*60*60, 9*60*60))
                 flagForSleep = 0
 
-
+time.sleep(8*60*60)
 GoPaste().Go_to()
