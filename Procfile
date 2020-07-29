@@ -1,1 +1,1 @@
-web: python avtobot.py 5000
+worker: python avtobot.py
